@@ -392,6 +392,12 @@ footer {
 
 .hero-slider{
   position:relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-width: 100vw;
   height:100vh;
   min-height:560px;
   color:var(--white);
