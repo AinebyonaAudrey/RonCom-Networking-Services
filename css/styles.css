@@ -272,6 +272,22 @@ p { margin-top: 0; margin-bottom: 1rem; }
 .text-primary { color: var(--bs-primary) !important; }
 .text-dark { color: var(--bs-dark) !important; }
 
+/* Custom: Smaller social icon buttons (half size) */
+.btn.rounded-circle.sm-icon-btn {
+  padding: 0.25rem !important;
+  width: 1.5rem;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn.rounded-circle.sm-icon-btn i {
+  font-size: 0.625rem !important;
+  line-height: 1;
+}
+
 /* Footer */
 footer {
   background-color: var(--bs-dark);
