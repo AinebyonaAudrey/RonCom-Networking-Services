@@ -50,15 +50,66 @@
         <!-- Page Content-->
         <div class="container px-4 px-lg-5">
 
-            <!-- Heading Row-->
-            <div class="row gx-4 gx-lg-5 align-items-center my-5">
-                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="assets/home-1.jpg" alt="..." /></div>
-                <div class="col-lg-5">
-                    <h1 class="font-weight-light">RonCom Networking Services</h1>
-                    <p>We are a premier provider of networking and internet services in  any corner of Uganda</p>
-                    <a class="btn btn-primary" href="#!">Contact Us</a>
+            <!-- Hero Slider -->
+            <section class="hero-slider" aria-label="Featured">
+            <button class="nav nav--prev" aria-label="Previous slide">
+                <span class="nav__circle"><span class="nav__arrow">←</span></span>
+            </button>
+
+            <button class="nav nav--next" aria-label="Next slide">
+                <span class="nav__circle"><span class="nav__arrow">→</span></span>
+            </button>
+
+            <div class="slides">
+                <!-- Slide 1: Business -->
+                <article class="slide is-active" style="background-image:url('assets/slide-1.webp')">
+                <div class="slide__overlay"></div>
+                <div class="slide__content">
+                    <h1 class="title">
+                    RONCOM<br>
+                    NETWORKING SERVICES
+                    </h1>
+                    <p class="subhead">
+                    A premier provider of networking and internet services in  any corner of Uganda
+                    </p>
+                    <div class="cta-row">
+                    <a class="btn btn--primary" href="#contact">
+                        <span class="btn__icon">🛡️</span> CONTACT US
+                    </a>
+                    <a class="phone" href="tel:+256394868144">
+                        <span class="phone__icon">📞</span>
+                        <span class="phone__num">0394 868 144</span>
+                    </a>
+                    </div>
                 </div>
+                </article>
+
+                <!-- Slide 2: Home -->
+                <article class="slide" style="background-image:url('assets/home-1.jpg')">
+                <div class="slide__overlay"></div>
+                <div class="slide__content">
+                    <h2 class="title">
+                    RONCOM<br>
+                    NETWORKING SERVICES
+                    </h2>
+                    <p class="subhead">
+                    A premier provider of networking and internet services in  any corner of Uganda
+                    </p>
+                    <div class="cta-row">
+                    <a class="btn btn--primary" href="#contact">
+                        <span class="btn__icon">🛡️</span> CONTACT US
+                    </a>
+                    <a class="phone" href="tel:+256394868144">
+                        <span class="phone__icon">📞</span>
+                        <span class="phone__num">0394 868 144</span>
+                    </a>
+                    </div>
+                </div>
+                </article>
             </div>
+
+            <div class="dots" role="tablist" aria-label="Slider pagination"></div>
+            </section>
 
             <!-- Call to Action-->
             <div class="card text-white bg-secondary my-5 py-4 text-center">
@@ -146,5 +197,76 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+
+        <!-- JS for SLIDER -->
+        <script>
+        (function(){
+        const slider = document.querySelector('.hero-slider');
+        if(!slider) return;
+
+        const slides = Array.from(slider.querySelectorAll('.slide'));
+        const dotsWrap = slider.querySelector('.dots');
+        const prevBtn = slider.querySelector('.nav--prev');
+        const nextBtn = slider.querySelector('.nav--next');
+
+        let index = 0;
+        let timer = null;
+        const AUTOPLAY_MS = 6500;
+
+        // Build dots
+        slides.forEach((_, i) => {
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.setAttribute('role','tab');
+            b.setAttribute('aria-label', 'Go to slide ' + (i+1));
+            b.addEventListener('click', () => go(i, true));
+            dotsWrap.appendChild(b);
+        });
+
+        function updateUI(){
+            slides.forEach((s,i)=>s.classList.toggle('is-active', i===index));
+            dotsWrap.querySelectorAll('button').forEach((b,i)=>{
+            b.setAttribute('aria-selected', i===index ? 'true' : 'false');
+            });
+        }
+
+        function go(i, pause){
+            index = (i + slides.length) % slides.length;
+            updateUI();
+            if(pause) restartAutoplay();
+        }
+
+        function next(){ go(index+1, true); }
+        function prev(){ go(index-1, true); }
+
+        prevBtn.addEventListener('click', prev);
+        nextBtn.addEventListener('click', next);
+
+        // Keyboard
+        slider.addEventListener('keydown', (e)=>{
+            if(e.key === 'ArrowRight') next();
+            if(e.key === 'ArrowLeft') prev();
+        });
+        slider.tabIndex = 0;
+
+        // Touch swipe
+        let sx = 0;
+        slider.addEventListener('touchstart', e => sx = e.touches[0].clientX, {passive:true});
+        slider.addEventListener('touchend', e => {
+            const dx = e.changedTouches[0].clientX - sx;
+            if(Math.abs(dx) > 50) (dx < 0 ? next() : prev());
+        });
+
+        function restartAutoplay(){
+            if(timer) clearInterval(timer);
+            timer = setInterval(()=> go(index+1, false), AUTOPLAY_MS);
+        }
+
+        // init
+        updateUI();
+        restartAutoplay();
+        })();
+        </script>
     </body>
 </html>
