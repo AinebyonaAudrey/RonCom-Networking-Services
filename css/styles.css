@@ -273,7 +273,7 @@ p { margin-top: 0; margin-bottom: 1rem; }
 }
 
 .text-success { color: var(--bs-success) !important; }
-.text-primary { color: var(--bs-primary) !important; }
+.text-primary { color: #4a6fa1 !important; }
 .text-dark { color: var(--bs-dark) !important; }
 
 /* Custom: Smaller social icon buttons (half size) */
@@ -514,7 +514,7 @@ footer {
   display:inline-flex;
   align-items:center;
   gap:12px;
-  color:#fff;
+  color:#e0e0e0;
   text-decoration:none;
   font-size: clamp(18px, 2.6vw, 26px);
   border-bottom:2px solid rgba(255,255,255,.35);
