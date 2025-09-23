@@ -410,6 +410,12 @@ footer {
     margin-left: -50vw;
     margin-right: -50vw;
   }
+
+  #nav-social-icons {
+    margin-top: 0%;
+    padding-top: 0%;
+    border-top: none;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -590,6 +596,13 @@ footer {
 @media (max-width: 720px){
   .cta-row{ gap:18px; flex-wrap:wrap; }
   .nav__circle{ width:64px; height:64px; }
+}
+
+#services-page {
+  background-image: url('../assets/images/servers.jpeg');
+  background-size: cover;
+  background-position: 100%;
+  min-height: 100vh;
 }
 
 
