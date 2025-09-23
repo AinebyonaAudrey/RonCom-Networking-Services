@@ -401,6 +401,15 @@ footer {
   .service-content {
     padding: 20px;
   }
+
+  footer {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
 }
 
 @media (max-width: 575.98px) {
