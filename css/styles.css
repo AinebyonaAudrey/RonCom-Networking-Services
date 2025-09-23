@@ -322,6 +322,11 @@ footer {
   height: 200px;
 }
 
+#installations {
+  position: relative;
+  left: 25%;
+}
+
 .service-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
@@ -374,6 +379,11 @@ footer {
   .service-card {
     flex-direction: column;
     height: auto;
+  }
+
+  #installations {
+    position: relative;
+    left: 0%;
   }
   
   .service-image {
@@ -565,4 +575,6 @@ footer {
   .cta-row{ gap:18px; flex-wrap:wrap; }
   .nav__circle{ width:64px; height:64px; }
 }
+
+
   
