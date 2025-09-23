@@ -297,6 +297,13 @@ footer {
   background-color: var(--bs-dark);
   color: white;
   padding: 3rem 0;
+  
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .justify-content-between {
