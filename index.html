@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>RonCom Networking Services</title>
+        <title>RonCom Networks</title>
 
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
 
         <!-- social media icons bootstrap-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -59,12 +59,12 @@
 
                 <div class="slides">
                     <!-- Slide 1: Business -->
-                    <article class="slide is-active" style="background-image:url('assets/slide-1.webp')">
+                    <article class="slide is-active" style="background-image:url('assets/images/networking2.jpg')">
                     <div class="slide__overlay"></div>
                     <div class="slide__content">
                         <h1 class="title">
                         RONCOM<br>
-                        NETWORKING SERVICES
+                        NETWORKS
                         </h1>
                         <p class="subhead">
                         A premier provider of networking and internet services in  any corner of Uganda
@@ -82,12 +82,12 @@
                     </article>
 
                     <!-- Slide 2: Home -->
-                    <article class="slide" style="background-image:url('assets/home-1.jpg')">
+                    <article class="slide" style="background-image:url('assets/images/home-1.jpg')">
                     <div class="slide__overlay"></div>
                     <div class="slide__content">
                         <h2 class="title">
                         RONCOM<br>
-                        NETWORKING SERVICES
+                        NETWORKS
                         </h2>
                         <p class="subhead">
                         A premier provider of networking and internet services in  any corner of Uganda
@@ -111,61 +111,61 @@
             <!-- Call to Action-->
             <div class="card text-white bg-secondary my-5 py-4 text-center">
                 <div class="card-body">
-                    <h2 class="text-white m-0">Our Services</h2>    
+                    <h2 class="text-white m-0">Products and Services</h2>    
                 </div>
             </div>
 
             <!-- Content Row-->
             <div class="row gx-4 gx-lg-5 service-cards">
                 
-                <!-- CCTV Cameras Card -->
+                <!-- MikroTik Router Card -->
                 <div class="col-lg-6 mb-4">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/cctv-camera.jpg" alt="CCTV Camera">
+                            <img src="assets/images/mikrotik_router.jpeg" alt="CCTV Camera">
                         </div>
                         <div class="service-content">
-                            <h3 class="service-title">CCTV Cameras</h3>
-                            <p class="service-text">Our CCTV cameras aim at enhancing security and surveillance m h through advanced features which will help you in real monitoring, crime prevention and efficient response to incidents.</p>
+                            <h3 class="service-title">MikroTik Router</h3>
+                            <p class="service-text">Advanced firewall, multi-device support and high speed connections, ideal for hotspots, labs and power users.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Access Control Systems Card -->
+                <!-- Ubiquiti UniFi Card -->
                 <div class="col-lg-6 mb-4">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/intercom (1).jpg" alt="Access Control Systems">
+                            <img src="assets/images/unifi_access_point.jpg" alt="Access Control Systems">
                         </div>
                         <div class="service-content">
-                            <h3 class="service-title">Intercom Systems</h3>
-                            <p class="service-text">We do seamless communication solutions for secure and efficient interaction</p>
+                            <h3 class="service-title">UniFi Access Point</h3>
+                            <p class="service-text">Supports 200+ devices, 1250 square ft coverage. Great for offices and multi-building setups.</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Digital Door Locks Card -->
+                <!-- Ruijie routers & access point Card -->
                 <div class="col-lg-6 mb-4">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/access-control.jpg" alt="Digital Door Locks">
+                            <img src="assets/images/ruijie_access_point.jpg" alt="Digital Door Locks">
                         </div>
                         <div class="service-content">
-                            <h3 class="service-title">Access Control</h3>
-                            <p class="service-text">Our advanced systems will help you manage and restrict entry to secured areas</p>
+                            <h3 class="service-title">Ruijie Access Point</h3>
+                            <p class="service-text">Great for business hotspots, secure remote work and scalable networks. Also includes guest Wi-Fi management</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Time and Attendance Management Systems Card -->
+                <!-- TP-Link routers & access point card -->
                 <div class="col-lg-6 mb-4">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/solar-cctv-cameras.jpg" alt="Time and Attendance Management">
+                            <img src="assets/images/TP-Link.jpg" alt="TP-Link  Router">
                         </div>
                         <div class="service-content">
-                            <h3 class="service-title">Solar Camera</h3>
-                            <p class="service-text">We deliver high-quality, reliable, and cost-effective security and automation solutions.</p>
+                            <h3 class="service-title">TP-Link Router</h3>
+                            <p class="service-text">Affordable Wi-Fi for homes and small office. Also, ideal for mesh and cloud management.</p>
                         </div>
                     </div>
                 </div>
@@ -194,78 +194,9 @@
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
+        
+        <!-- Core theme and SLIDER JS-->
         <script src="js/scripts.js"></script>
-
-
-        <!-- JS for SLIDER -->
-        <script>
-        (function(){
-        const slider = document.querySelector('.hero-slider');
-        if(!slider) return;
-
-        const slides = Array.from(slider.querySelectorAll('.slide'));
-        const dotsWrap = slider.querySelector('.dots');
-        const prevBtn = slider.querySelector('.nav--prev');
-        const nextBtn = slider.querySelector('.nav--next');
-
-        let index = 0;
-        let timer = null;
-        const AUTOPLAY_MS = 6500;
-
-        // Build dots
-        slides.forEach((_, i) => {
-            const b = document.createElement('button');
-            b.type = 'button';
-            b.setAttribute('role','tab');
-            b.setAttribute('aria-label', 'Go to slide ' + (i+1));
-            b.addEventListener('click', () => go(i, true));
-            dotsWrap.appendChild(b);
-        });
-
-        function updateUI(){
-            slides.forEach((s,i)=>s.classList.toggle('is-active', i===index));
-            dotsWrap.querySelectorAll('button').forEach((b,i)=>{
-            b.setAttribute('aria-selected', i===index ? 'true' : 'false');
-            });
-        }
-
-        function go(i, pause){
-            index = (i + slides.length) % slides.length;
-            updateUI();
-            if(pause) restartAutoplay();
-        }
-
-        function next(){ go(index+1, true); }
-        function prev(){ go(index-1, true); }
-
-        prevBtn.addEventListener('click', prev);
-        nextBtn.addEventListener('click', next);
-
-        // Keyboard
-        slider.addEventListener('keydown', (e)=>{
-            if(e.key === 'ArrowRight') next();
-            if(e.key === 'ArrowLeft') prev();
-        });
-        slider.tabIndex = 0;
-
-        // Touch swipe
-        let sx = 0;
-        slider.addEventListener('touchstart', e => sx = e.touches[0].clientX, {passive:true});
-        slider.addEventListener('touchend', e => {
-            const dx = e.changedTouches[0].clientX - sx;
-            if(Math.abs(dx) > 50) (dx < 0 ? next() : prev());
-        });
-
-        function restartAutoplay(){
-            if(timer) clearInterval(timer);
-            timer = setInterval(()=> go(index+1, false), AUTOPLAY_MS);
-        }
-
-        // init
-        updateUI();
-        restartAutoplay();
-        })();
-        </script>
+        
     </body>
 </html>
