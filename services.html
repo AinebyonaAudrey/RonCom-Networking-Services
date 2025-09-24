@@ -31,6 +31,38 @@
         
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        
+        <!-- Custom styles -->
+        <style>
+            .card-title {
+                font-style: italic;
+                margin-bottom: 1.2rem;
+                color: #fff;
+            }
+            .card-text {
+                font-family: 'Segoe UI', Arial, sans-serif;
+                line-height: 1.6;
+                color: #e6e6e6;
+            }
+            .card {
+                transition: transform 0.3s ease;
+            }
+            .card:hover {
+                transform: translateY(-5px);
+            }
+            .systems-card .card-body {
+                background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            }
+            .graphics-card .card-body {
+                background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+            }
+            .it-support-card .card-body {
+                background: linear-gradient(135deg, #0b4f6c 0%, #01baef 100%);
+            }
+            .web-card .card-body {
+                background: linear-gradient(135deg, #0f3443 0%, #34e89e 100%);
+            }
+        </style>
 
     </head>
     <body id="services-page">
@@ -75,7 +107,7 @@
             <div class="row gx-4 gx-lg-5">
 
                 <div class="col-md-4 mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100 systems-card">
                         <div class="card-body">
                             <h2 class="card-title text-center">Systems Installation</h2>
                             <p class="card-text">
@@ -86,7 +118,7 @@
                 </div>
 
                 <div class="col-md-4 mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100 graphics-card">
                         <div class="card-body">
                             <h2 class="card-title text-center">Graphics Design</h2>
                             <p class="card-text">
@@ -97,7 +129,7 @@
                 </div>
 
                 <div class="col-md-4 mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100 it-support-card">
                         <div class="card-body">
                             <h2 class="card-title text-center">IT Support</h2>
                             <p class="card-text">
@@ -108,7 +140,7 @@
                 </div>
 
                 <div class="col-md-4 mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100 web-card">
                         <div class="card-body">
                             <h2 class="card-title text-center">Web Design</h2>
                             <p class="card-text">
