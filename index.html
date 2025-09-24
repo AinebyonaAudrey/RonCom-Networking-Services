@@ -3,8 +3,24 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        
+        <meta name="description" content="RonCom Networks - Offering networking and internet solutions in Uganda including routers, access points, IT support and training" />
+        <meta name="keywords" content="networking services uganda, internet services uganda, internet services kampala, MikroTik router, UniFi access point, network installation, wireless network design" />
+        <meta name="author" content="RonCom Networks" />
+        
+        <meta property="og:title" content="RonCom Networks - Networking and Internet Solutions" />
+        <meta property="og:description" content="Premier provider of networking and internet services in Uganda. Expert installation and support for MikroTik, UniFi, Ruijie and TP-Link solutions." />
+        <meta property="og:image" content="assets/images/networking2.jpg" />
+        <meta property="og:url" content="https://roncomnetworks.com" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="RonCom Networks - Networking and Internet Solutions" />
+        <meta name="twitter:description" content="Premier provider of networking and internet services in Uganda" />
+        <meta name="twitter:image" content="assets/images/networking2.jpg" />
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://roncomnetworks.com/" />
+
         <title>RonCom Networks</title>
 
         <!-- Favicon-->
@@ -45,9 +61,10 @@
         </nav>
 
         <!-- Page Content-->
-        <div class="container px-4 px-lg-5">
+        <main>
+            <div class="container px-4 px-lg-5">
 
-            <!-- Hero Slider -->
+                <!-- Hero Slider -->
             <section class="hero-slider" aria-label="Featured">
                 <button class="nav nav--prev" aria-label="Previous slide">
                     <span class="nav__circle"><span class="nav__arrow">←</span></span>
@@ -59,7 +76,7 @@
 
                 <div class="slides">
                     <!-- Slide 2: Business -->
-                    <article class="slide" style="background-image:url('assets/images/networking2.jpg')">
+                    <article class="slide" style="background-image:url('assets/images/networking2.jpg')" role="img" aria-label="Professional networking solutions by RonCom Networks">
                     <div class="slide__overlay"></div>
                     <div class="slide__content">
                         <h1 class="title">
@@ -82,7 +99,7 @@
                     </article>
 
                     <!-- Slide 1: Home -->
-                    <article class="slide is-active" style="background-image:url('assets/images/home-1.jpg')">
+                    <article class="slide is-active" style="background-image:url('assets/images/home-1.jpg')" role="img" aria-label="RonCom Networks - Your trusted networking partner in Uganda">
                     <div class="slide__overlay"></div>
                     <div class="slide__content">
                         <h2 class="title">
@@ -122,7 +139,7 @@
                 <div class="col-lg-6 mb-4">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/images/mikrotik_router.jpeg" alt="CCTV Camera">
+                            <img src="assets/images/mikrotik_router.jpeg" alt="MikroTik Router - Professional grade networking device for advanced firewall and hotspot solutions" loading="lazy" decoding="async">
                         </div>
                         <div class="service-content">
                             <h3 class="service-title">MikroTik Router</h3>
@@ -135,7 +152,7 @@
                 <div class="col-lg-6 mb-4">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/images/unifi_access_point.jpg" alt="Access Control Systems">
+                            <img src="assets/images/unifi_access_point.jpg" alt="UniFi Access Point - Enterprise-grade WiFi solution supporting 200+ devices" loading="lazy" decoding="async">
                         </div>
                         <div class="service-content">
                             <h3 class="service-title">UniFi Access Point</h3>
@@ -148,7 +165,7 @@
                 <div class="col-lg-6 mb-4">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/images/ruijie_access_point.jpg" alt="Digital Door Locks">
+                            <img src="assets/images/ruijie_access_point.jpg" alt="Ruijie Access Point - Professional WiFi solution for business hotspots and remote work" loading="lazy" decoding="async">
                         </div>
                         <div class="service-content">
                             <h3 class="service-title">Ruijie Access Point</h3>
@@ -161,7 +178,7 @@
                 <div class="col-lg-6 mb-4">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/images/TP-Link.jpg" alt="TP-Link  Router">
+                            <img src="assets/images/TP-Link.jpg" alt="TP-Link Router - Affordable WiFi solution for homes and small offices with mesh capabilities" loading="lazy" decoding="async">
                         </div>
                         <div class="service-content">
                             <h3 class="service-title">TP-Link Router</h3>
@@ -174,7 +191,7 @@
                 <div class="col-lg-6 mb-4" id="installations">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/images/installations2.jpg" alt="Installation Services">
+                            <img src="assets/images/installations2.jpg" alt="Professional network installation and configuration services by RonCom Networks" loading="lazy" decoding="async">
                         </div>
                         <div class="service-content" style="background: #A9A9A9;">
                             <h2 class="service-title" style="color: #ADD8E6;"><i>NETWORKING SERVICES</i></h2>
@@ -184,9 +201,8 @@
                 </div>
 
             </div>
-        </div>
-
-        
+            </div>
+        </main>
 
         <!-- Footer-->
         <footer class="py-5 bg-dark footer">
@@ -216,6 +232,28 @@
         
         <!-- Core theme and SLIDER JS-->
         <script src="js/scripts.js"></script>
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "RonCom Networks",
+            "image": "assets/images/networking2.jpg",
+            "description": "Premier provider of networking and internet services in Uganda",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Uganda"
+            },
+            "telephone": "+256394868144",
+            "sameAs": [
+                "https://wa.me/256704148111",
+                "https://t.me/Ronn_pro"
+            ],
+            "openingHours": ["Mo-Su 07:00-19:00"],
+            "priceRange": "$$"
+        }
+        </script>
         
     </body>
 </html>
