@@ -32,6 +32,27 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
 
+        <!-- Custom styles -->
+        <style>
+            .service-card {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            .service-card.fade-in {
+                animation: fadeInUp 0.6s ease forwards;
+            }
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -258,6 +279,29 @@
         
         <!-- Core theme and SLIDER JS-->
         <script src="js/scripts.js"></script>
+
+        <!-- Scroll Animation Script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const cards = document.querySelectorAll('.service-card');
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('fade-in');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+
+                cards.forEach(card => {
+                    observer.observe(card);
+                });
+            });
+        </script>
 
         <!-- Structured Data -->
         <script type="application/ld+json">
